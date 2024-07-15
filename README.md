@@ -19,6 +19,7 @@ public class MyClass {
 
 #### usage
 ```
+./gradlew clean build --refresh-dependencies --info
 gradle build --rerun-tasks
 ```
 

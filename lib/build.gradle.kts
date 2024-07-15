@@ -14,7 +14,7 @@ publishing { // need this for jitpack.io to sucessfully build this repo, and it'
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
-            groupId = "com.github.i_api"
+            groupId = "com.github.i-api"
             artifactId = "Console"
             version = "1.0.9"
         }
