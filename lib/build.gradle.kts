@@ -13,9 +13,9 @@ plugins {
 publishing { // need this for jitpack.io to sucessfully build this repo, and it's artifacts
     publications {
         create<MavenPublication>("mavenJava") {
-            groupId = "com.github.i-api"
+            groupId = "com.github.i_api"
             artifactId = "Console"
-            version = "1.0.7"
+            version = "1.0.8"
         }
     }
 }
