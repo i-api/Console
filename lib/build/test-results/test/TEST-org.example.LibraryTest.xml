@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-15T17:33:06" hostname="as-MacBook-Air.local" time="0.013">
+<testsuite name="org.example.LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-15T17:55:27" hostname="as-MacBook-Air.local" time="0.014">
   <properties/>
-  <testcase name="someLibraryMethodReturnsTrue()" classname="org.example.LibraryTest" time="0.013"/>
-  <system-out><![CDATA[13:33:06.935 [Test worker] INFO Console -- ?[0;36mThis is console log! ?[0m
+  <testcase name="someLibraryMethodReturnsTrue()" classname="org.example.LibraryTest" time="0.014"/>
+  <system-out><![CDATA[13:55:27.054 [Test worker] INFO Console -- ?[0;36mThis is console log! ?[0m
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

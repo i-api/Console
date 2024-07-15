@@ -11,6 +11,16 @@ plugins {
     `maven-publish` // may need this to publish this as a library. enables command: ./gradlew publish
 }
 
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            groupId = "com.github.i-api"
+            artifactId = "Console"
+            version = "1.0.6"
+        }
+    }
+}
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()

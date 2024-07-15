@@ -1,5 +1,5 @@
-L13:33:06.935 [Test worker] INFO Console -- [0;36mThis is console log! [0m
+L13:55:27.054 [Test worker] INFO Console -- [0;36mThis is console log! [0m
 ?console object instance:org.example.utilities.Console@62833051
-\13:33:06.945 [Test worker] INFO Console -- [0;36mThis is log output from console.log! [0m
+\13:55:27.065 [Test worker] INFO Console -- [0;36mThis is log output from console.log! [0m
 %accessKeyId: YOUR_PASSWORD_GOES_HERE
 )secretAccessKey: YOUR_PASSWORD_GOES_HERE
