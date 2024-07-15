@@ -8,6 +8,7 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+    `maven-publish` // may need this to publish this as a library. enables command: ./gradlew publish
 }
 
 repositories {
