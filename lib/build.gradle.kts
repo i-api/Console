@@ -21,9 +21,8 @@ publishing { // need this for jitpack.io to sucessfully build this repo, and it'
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
-    mavenCentral()
-    // maven { url = uri("https://jitpack.io") } // jitpack, allows github repos to be used as maven java dependencies. commenting out because this is supposed to be used by the "importer/consumer/user repo", not the "provider/dependency repo"
+    mavenCentral()                              // Use Maven Central for resolving dependencies.
+    maven { url = uri("https://jitpack.io") }   // jitpack, allows github repos to be used as maven java dependencies. Not necessary in this "publish/export/provider/dependency repo". Keeping it here just because it allows access to a wide range of packages. It is used by the "importer/consumer/user repo", which ever repo you want to import dependencies into.
 }
 
 dependencies {
