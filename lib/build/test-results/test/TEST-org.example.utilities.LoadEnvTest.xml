@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.utilities.LoadEnvTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-15T17:33:06" hostname="as-MacBook-Air.local" time="0.002">
+  <properties/>
+  <testcase name="Validates that Credentials load from .env file" classname="org.example.utilities.LoadEnvTest" time="0.002"/>
+  <system-out><![CDATA[accessKeyId: YOUR_PASSWORD_GOES_HERE
+secretAccessKey: YOUR_PASSWORD_GOES_HERE
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

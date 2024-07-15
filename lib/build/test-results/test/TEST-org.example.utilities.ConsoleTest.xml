@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.utilities.ConsoleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-15T17:33:06" hostname="as-MacBook-Air.local" time="0.001">
+  <properties/>
+  <testcase name="Test that Console Colorizer Utility is correctly consumed by Log4j" classname="org.example.utilities.ConsoleTest" time="0.001"/>
+  <system-out><![CDATA[console object instance:org.example.utilities.Console@62833051
+13:33:06.945 [Test worker] INFO Console -- ?[0;36mThis is log output from console.log! ?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
