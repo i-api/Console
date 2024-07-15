@@ -8,10 +8,9 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
-    `maven-publish` // may need this to publish this as a library. enables command: ./gradlew publish
+    `maven-publish` // need this to publish this as a library. enables command: ./gradlew publish
 }
-
-publishing {
+publishing { // need this for jitpack.io to sucessfully build this repo, and it's artifacts
     publications {
         create<MavenPublication>("mavenJava") {
             groupId = "com.github.i-api"
@@ -24,7 +23,7 @@ publishing {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
-    maven { url = uri("https://jitpack.io") } // jitpack for github deps
+    // maven { url = uri("https://jitpack.io") } // jitpack, allows github repos to be used as maven java dependencies. commenting out because this is supposed to be used by the "importer/consumer/user repo", not the "provider/dependency repo"
 }
 
 dependencies {
