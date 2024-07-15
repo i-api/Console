@@ -16,7 +16,7 @@ import java.util.HashMap;
 usage:
 LoadEnv.fromFilePath().get("username")
  */
-final class LoadEnv {
+public final class LoadEnv {
     private LoadEnv() {
         throw new AssertionError("Utility class should not be instantiated");
     }

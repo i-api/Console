@@ -16,7 +16,7 @@ publishing { // need this for jitpack.io to sucessfully build this repo, and it'
             from(components["java"])
             groupId = "com.github.i-api"
             artifactId = "Console"
-            version = "1.0.9"
+            version = "1.0.10"
         }
     }
 }
