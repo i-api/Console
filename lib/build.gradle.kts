@@ -13,6 +13,7 @@ plugins {
 publishing { // need this for jitpack.io to sucessfully build this repo, and it's artifacts
     publications {
         create<MavenPublication>("mavenJava") {
+            from(components["java"])
             groupId = "com.github.i_api"
             artifactId = "Console"
             version = "1.0.8"
