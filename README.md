@@ -44,6 +44,9 @@ public class MyClass {
     public void someMethod() {
         Console console = new Console();
         console.log(Console.Color.PURPLE, "someMethod(): This is console.log!");
+        final HashMap credentials = LoadEnv.fromFilePath("example_env.txt"); // env belongs in <Package>/src or <Package>/lib of gradle folder
+        System.out.println("accessKeyId: " + credentials.get("accessKeyId"));
+        System.out.println("secretAccessKey: " + credentials.get("secretAccessKey"));
     }
 }
 ```
