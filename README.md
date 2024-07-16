@@ -19,8 +19,10 @@ public class MyClass {
 
 #### usage
 ```
-./gradlew clean build --refresh-dependencies --info
+gradle clean build --refresh-dependencies --info
 gradle build --rerun-tasks
+
+gradle clean build publishToMavenLocal
 ```
 
 
@@ -125,11 +127,27 @@ publishing { // need this for jitpack.io to sucessfully build this repo, and it'
     - for example: 1.0.1
 3. Go to https://jitpack.io/#i-api/Console
     - Click on "Get it"
-4. Import it into build.gradle.kts of the  "importer/consumer/user repo", not the "provider/dependency repo"
+4. In the "importer/consumer/user repo", not the "provider/dependency repo": Import the dependency into build.gradle.kts
 ```
+// build.gradle.kts
 repositories {
     mavenCentral()                              // Use Maven Central for resolving dependencies.
-    maven { url = uri("https://jitpack.io") }   // jitpack, allows github repos to be used as maven java dependencies. Not necessary in this "publish/export/provider/dependency repo". Keeping it here just because it allows access to a wide range of packages. It is used by the "importer/consumer/user repo", which ever repo you want to import dependencies into.
+    maven { url = uri("https://jitpack.io") }   // CUSTOM EDIT: jitpack, allows github repos to be used as maven java dependencies. Not necessary in this "publish/export/provider/dependency repo". Keeping it here just because it allows access to a wide range of packages. It is used by the "importer/consumer/user repo", which ever repo you want to import dependencies into.
+}
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation(libs.junit.jupiter)
+
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+    api(libs.commons.math3)
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+    implementation(libs.guava)
+
+    // CUSTOM EDIT:
+    implementation("com.github.i-api:Console:1.0.11")    // implementation(files("libs/Console-1.0.11.jar")) // local import, run jar -tf jar tf ~/.m2/repository/com/github/i-api/Console/1.0.11/Console-1.0.11.jar to see import path
 }
 ```
 
