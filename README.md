@@ -150,5 +150,16 @@ dependencies {
     implementation("com.github.i-api:Console:1.0.11")    // implementation(files("libs/Console-1.0.11.jar")) // local import, run jar -tf jar tf ~/.m2/repository/com/github/i-api/Console/1.0.11/Console-1.0.11.jar to see import path
 }
 ```
+5. Import the dependency into your java runtime. If you are confused about the import name of the dependency, run ```jar -tf <PACKAGE_NAME>``` to see the proper import path
+```
+import org.example.utilities.Console;
+public class Library {
+    public boolean someLibraryMethod() {
+        Console console = new Console();
+        console.log(Console.Color.PURPLE, "someLibraryMethod(): This is console.log!");
+        return true;
+    }
+}
+```
 
 
