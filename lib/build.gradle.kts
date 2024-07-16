@@ -51,6 +51,9 @@ dependencies {
     // Logging
     implementation("org.slf4j:slf4j-api:2.0.0")                     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     implementation("ch.qos.logback:logback-classic:1.5.6")          // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+
+    // The consumer of this package would import this package like this:
+    // implementation("com.github.i-api:Console:1.0.12")    // implementation(files("libs/Console-1.0.11.jar")) // local import, run jar -tf jar tf ~/.m2/repository/com/github/i-api/Console/1.0.11/Console-1.0.11.jar to see import path
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
