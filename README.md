@@ -39,6 +39,7 @@ tasks.withType<Test> {
  * Provides colorized string functionality.
  */
 import org.example.utilities.Console;
+import org.example.utilities.LoadEnv;
 public class MyClass {
     public void someMethod() {
         Console console = new Console();
