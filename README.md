@@ -147,11 +147,15 @@ dependencies {
     implementation(libs.guava)
 
     // CUSTOM EDIT:
-    implementation("com.github.i-api:Console:1.0.11")    // implementation(files("libs/Console-1.0.11.jar")) // local import, run jar -tf jar tf ~/.m2/repository/com/github/i-api/Console/1.0.11/Console-1.0.11.jar to see import path
+    implementation("com.github.i-api:Console:1.0.12")    // implementation(files("libs/Console-1.0.11.jar")) // local import, run jar -tf jar tf ~/.m2/repository/com/github/i-api/Console/1.0.11/Console-1.0.11.jar to see import path
 }
 ```
-5. Import the dependency into your java runtime. If you are confused about the import name of the dependency, run ```jar -tf <PACKAGE_NAME>``` to see the proper import path
+5. Import the dependency into <FILENAME>.java
+    - intuitively you'd think that the import would follow ```implementation("com.github.i-api:Console:1.0.11")```
+    - but this is java. and we don't do that here.
+    - If you are confused about the import name of the dependency, run ```jar -tf <PACKAGE_NAME.jar>``` to see the proper import path
 ```
+// <FILENAME>.java
 import org.example.utilities.Console;
 public class Library {
     public boolean someLibraryMethod() {
